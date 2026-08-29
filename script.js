@@ -1,14 +1,8 @@
-const products=[
-{id:1,name:"Support téléphone ALU",desc:"Support aluminium anti-vibration, angle réglable.",price:10.00,cat:"pratique",img:"support-telephone.jpg",badge:"BEST-SELLER"},
-{id:2,name:"Bouchons de valve COLOR",desc:"Pack de 4 bouchons — plusieurs couleurs.",price:0.50,cat:"style",img:"bouchon-valve.jpg",badge:"NOUVEAU"},
-{id:3,name:"Protection câble FLEX",desc:"Gaine spirale pour organiser et protéger les câbles.",price:4.50,cat:"pratique",img:"protection-cable.jpg",badge:"ESSENTIEL"}
+const products = [
+  {id:1, name:"Support téléphone", desc:"Support téléphone pour voiture", price:10.99, cat:"accessoires"},
+  {id:2, name:"Câble USB", desc:"Câble USB de qualité", price:5.99, cat:"accessoires"},
+  {id:3, name:"Protection câble FLEX", desc:"Gaine souple pour protéger les câbles", price:4.59, cat:"accessoires"}
 ];
-let cart=JSON.parse(localStorage.getItem("voltly-cart")||"[]"), selected=null;
-const productsEl=document.querySelector("#products");
-const money=n=>n.toLocaleString("fr-FR",{style:"currency",currency:"EUR"});
-function renderProducts(cat="all"){
-productsEl.innerHTML=products.filter(p=>cat==="all"||p.cat===cat).map(p=>`<article class="product"><div class="product-img" onclick="openProduct(${p.id})"><span class="badge">${p.badge}</span><img src="${p.img}" alt="${p.name}"></div><div class="product-info"><h3>${p.name}</h3><p>${p.desc}</p><div class="price-row"><span class="price">${money(p.price)}</span><button class="add" onclick="addToCart(${p.id})">Ajouter +</button></div></div></article>`).join("");
-}
 function save(){localStorage.setItem("voltly-cart",JSON.stringify(cart));renderCart()}
 function addToCart(id){const x=cart.find(i=>i.id===id);x?x.qty++:cart.push({id,qty:1});save();openCart()}
 function change(id,d){const x=cart.find(i=>i.id===id);if(!x)return;x.qty+=d;if(x.qty<=0)cart=cart.filter(i=>i.id!==id);save()}
