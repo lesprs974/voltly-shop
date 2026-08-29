@@ -1,28 +1,31 @@
 const products = [
   {
     id: 1,
-    name: "Support téléphone",
-    desc: "Support téléphone pour voiture",
-    price: 10.99,
-    cat: "accessoires"
+    name: "Gaine de câble spiralée",
+    desc: "Protection spiralée pour câbles de trottinette",
+    price: 0,
+    cat: "accessoires",
+    img: "protection-cable.jpg"
   },
   {
     id: 2,
-    name: "Câble USB",
-    desc: "Câble USB de qualité",
-    price: 5.99,
-    cat: "accessoires"
+    name: "Support téléphone aluminium",
+    desc: "Support téléphone réglable et anti-vibration",
+    price: 0,
+    cat: "accessoires",
+    img: "support-telephone.jpg"
   },
   {
     id: 3,
-    name: "Protection câble FLEX",
-    desc: "Gaine souple pour protéger les câbles",
-    price: 4.59,
-    cat: "accessoires"
+    name: "Embout de valve coloré",
+    desc: "Embout de valve en aluminium disponible en plusieurs couleurs",
+    price: 0,
+    cat: "accessoires",
+    img: "bouchon-valve.jpg"
   }
 ];
 
-let cart = JSON.parse(localStorage.getItem("volty-cart")) || [];
+let cart = JSON.parse(localStorage.getItem("volty-cart") || "[]");
 
 function save() {
   localStorage.setItem("volty-cart", JSON.stringify(cart));
@@ -61,7 +64,8 @@ function renderProducts() {
   if (!box) return;
 
   box.innerHTML = products.map(p => `
-    <div class="product">
+    <div class="product-card">
+      ${p.img ? `<img src="${p.img}" alt="${p.name}">` : ""}
       <h3>${p.name}</h3>
       <p>${p.desc}</p>
       <strong>${p.price.toFixed(2)} €</strong>
@@ -77,25 +81,83 @@ function renderCart() {
   if (count) {
     count.textContent = cart.reduce((a, x) => a + x.qty, 0);
   }
+
+  const box = document.querySelector("#cartItems");
+  if (!box) return;
+
+  if (!cart.length) {
+    box.innerHTML = "<p>Ton panier est vide.</p>";
+    return;
+  }
+
+  let total = 0;
+
+  box.innerHTML = cart.map(x => {
+    const p = products.find(p => p.id === x.id);
+    if (!p) return "";
+
+    total += p.price * x.qty;
+
+    return `
+      <div class="cart-line">
+        <span>${p.name}</span>
+        <span>${p.price.toFixed(2)} €</span>
+        <button onclick="change(${p.id}, -1)">−</button>
+        <span>${x.qty}</span>
+        <button onclick="change(${p.id}, 1)">+</button>
+      </div>
+    `;
+  }).join("");
+
+  const subtotal = document.querySelector("#subtotal");
+  if (subtotal) {
+    subtotal.textContent = total.toFixed(2) + " €";
+  }
 }
 
 function openCart() {
-  const cartBox = document.querySelector("#cart");
-  const overlay = document.querySelector("#overlay");
-
-  if (cartBox) cartBox.classList.add("open");
-  if (overlay) overlay.classList.add("show");
+  document.querySelector("#cart")?.classList.add("open");
+  document.querySelector("#overlay")?.classList.add("show");
 }
 
 function closeCart() {
-  const cartBox = document.querySelector("#cart");
-  const overlay = document.querySelector("#overlay");
-
-  if (cartBox) cartBox.classList.remove("open");
-  if (overlay) overlay.classList.remove("show");
+  document.querySelector("#cart")?.classList.remove("open");
+  document.querySelector("#overlay")?.classList.remove("show");
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderProducts();
-  renderCart();
+function openProduct(id) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+
+  const modal = document.querySelector("#productModal");
+  if (!modal) return;
+
+  modal.querySelector("#modalTitle").textContent = p.name;
+  modal.querySelector("#modalDesc").textContent = p.desc;
+  modal.querySelector("#modalPrice").textContent =
+    p.price.toFixed(2) + " €";
+
+  modal.classList.add("show");
+}
+
+function closeProduct() {
+  document.querySelector("#productModal")?.classList.remove("show");
+}
+
+document.querySelector("#cartBtn")?.addEventListener("click", openCart);
+document.querySelector("#closeCart")?.addEventListener("click", closeCart);
+document.querySelector("#overlay")?.addEventListener("click", closeCart);
+
+document.querySelector("#modalClose")?.addEventListener("click", closeProduct);
+
+document.querySelector("#checkout")?.addEventListener("click", () => {
+  if (!cart.length) {
+    alert("Ton panier est vide.");
+    return;
+  }
+
+  alert("Étape suivante : paiement.");
 });
+
+renderProducts();
+renderCart();
