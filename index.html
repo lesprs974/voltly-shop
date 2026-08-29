@@ -1,83 +1,60 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="VOLTLY — accessoires modernes pour trottinettes électriques.">
-  <title>VOLTLY — Accessoires pour trottinettes</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="VOLTLY — accessoires pour trottinettes électriques.">
+<title>VOLTLY — Accessoires pour trottinettes</title><link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="announcement">⚡ Livraison offerte dès 35€ · Paiement sécurisé · Nouveaux accessoires chaque semaine</div>
+<div class="announcement">⚡ VOLTLY — ACCESSOIRES POUR RIDERS ÉLECTRIQUES</div>
+<header class="header"><a class="logo" href="#top">VOLT<span>LY</span></a>
+<nav><a href="#shop">Boutique</a><a href="#collections">Collections</a><a href="#faq">FAQ</a><a href="#about">À propos</a></nav>
+<button class="cart-btn" id="cartBtn">Panier <b id="cartCount">0</b></button></header>
 
-  <header class="header">
-    <a class="logo" href="#top">VOLT<span>LY</span></a>
-    <nav>
-      <a href="#shop">Boutique</a>
-      <a href="#collections">Collections</a>
-      <a href="#about">À propos</a>
-    </nav>
-    <button class="cart-btn" id="cartBtn">Panier <b id="cartCount">0</b></button>
-  </header>
+<main id="top">
+<section class="hero"><div class="hero-copy"><p class="eyebrow">ACCESSOIRES • RIDE • STYLE</p>
+<h1>Ton ride.<br><em>Ton style.</em></h1>
+<p class="hero-text">Des accessoires utiles et stylés pour personnaliser ta trottinette électrique : supports téléphone, bouchons de valve, protections de câbles et plus.</p>
+<div class="hero-actions"><a class="primary" href="#shop">Voir la collection <span>→</span></a><a class="secondary" href="#how">Comment ça marche ?</a></div>
+<div class="stats"><div><strong>3</strong><small>produits au lancement</small></div><div><strong>100%</strong><small>sélection rider</small></div><div><strong>24/7</strong><small>boutique en ligne</small></div></div></div>
+<div class="hero-card"><div class="glow"></div><div class="hero-product"><span class="floating-tag">DROP 01</span><div class="mini-wheel"></div><div class="hero-word">VOLTLY</div><p>ESSENTIALS FOR ELECTRIC RIDERS</p></div></div></section>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">ACCESSOIRES • RIDE • STYLE</p>
-        <h1>Ton ride.<br><em>Ton style.</em></h1>
-        <p class="hero-text">Des accessoires propres, utiles et stylés pour personnaliser ta trottinette électrique sans exploser ton budget.</p>
-        <div class="hero-actions">
-          <a class="primary" href="#shop">Découvrir la collection <span>→</span></a>
-          <a class="secondary" href="#about">Pourquoi VOLTLY ?</a>
-        </div>
-        <div class="stats"><div><strong>+20</strong><small>accessoires prévus</small></div><div><strong>4.9/5</strong><small>objectif satisfaction</small></div><div><strong>24/7</strong><small>support en ligne</small></div></div>
-      </div>
-      <div class="hero-card">
-        <div class="glow"></div>
-        <div class="hero-product">
-          <span class="floating-tag">NOUVEAU</span>
-          <div class="mini-wheel"></div>
-          <div class="hero-word">VOLTLY</div>
-          <p>ESSENTIALS FOR ELECTRIC RIDERS</p>
-        </div>
-      </div>
-    </section>
+<section class="marquee"><span>MINIMAL · SOLIDE · ACCESSIBLE · MINIMAL · SOLIDE · ACCESSIBLE ·</span></section>
 
-    <section class="marquee"><span>MINIMAL · SOLIDE · ACCESSIBLE · MINIMAL · SOLIDE · ACCESSIBLE ·</span></section>
+<section id="shop" class="section"><div class="section-head"><div><p class="eyebrow">LA BOUTIQUE</p><h2>Les essentiels du rider.</h2></div>
+<div class="filters"><button class="filter active" data-cat="all">Tout</button><button class="filter" data-cat="style">Style</button><button class="filter" data-cat="pratique">Pratique</button></div></div>
+<div class="products" id="products"></div></section>
 
-    <section id="shop" class="section">
-      <div class="section-head">
-        <div><p class="eyebrow">LA BOUTIQUE</p><h2>Les essentiels du rider.</h2></div>
-        <div class="filters"><button class="filter active" data-cat="all">Tout</button><button class="filter" data-cat="style">Style</button><button class="filter" data-cat="pratique">Pratique</button></div>
-      </div>
-      <div class="products" id="products"></div>
-    </section>
+<section id="how" class="how"><div><p class="eyebrow">SIMPLE</p><h2>Tu choisis.<br>On s'occupe du reste.</h2></div>
+<div class="how-grid"><article><span>01</span><h3>Choisis ton accessoire</h3><p>Ajoute les produits qui te plaisent au panier.</p></article>
+<article><span>02</span><h3>Passe commande</h3><p>Le paiement et les coordonnées de livraison sont collectés au checkout.</p></article>
+<article><span>03</span><h3>Expédition</h3><p>La commande est préparée puis expédiée avec un suivi quand il est disponible.</p></article></div></section>
 
-    <section id="collections" class="collection">
-      <div><p class="eyebrow">COLLECTION 01</p><h2>Upgrade ton setup.</h2><p>Des petits détails qui changent tout : finition aluminium, couleurs propres et accessoires pensés pour la route.</p><a class="primary" href="#shop">Voir les produits →</a></div>
-      <div class="collection-grid"><div>01<br><b>STYLE</b></div><div>02<br><b>PROTECTION</b></div><div>03<br><b>CONFORT</b></div></div>
-    </section>
+<section id="collections" class="collection"><div><p class="eyebrow">COLLECTION 01</p><h2>Upgrade ton setup.</h2><p>Des petits détails qui changent tout : finitions propres, couleurs et accessoires pensés pour la route.</p><a class="primary" href="#shop">Voir les produits →</a></div>
+<div class="collection-grid"><div>01<br><b>STYLE</b></div><div>02<br><b>PROTECTION</b></div><div>03<br><b>CONFORT</b></div><div>04<br><b>RIDE</b></div></div></section>
 
-    <section id="about" class="trust">
-      <div><p class="eyebrow">POURQUOI VOLTLY</p><h2>Simple. Propre. Rider.</h2></div>
-      <div class="trust-grid"><article><span>01</span><h3>Design moderne</h3><p>Une identité sobre et sportive qui colle à ton setup.</p></article><article><span>02</span><h3>Prix accessibles</h3><p>Des accessoires faciles à ajouter au panier et à offrir.</p></article><article><span>03</span><h3>Livraison rapide</h3><p>Une boutique pensée pour commander en quelques secondes.</p></article></div>
-    </section>
+<section id="faq" class="faq"><div><p class="eyebrow">FAQ</p><h2>Questions rapides.</h2></div>
+<div class="faq-list">
+<details><summary>Combien coûte la livraison ? <span>+</span></summary><p>À définir selon ton fournisseur et ton mode d'expédition. Ne publie pas de tarif avant de l'avoir vérifié.</p></details>
+<details><summary>Quels sont les délais ? <span>+</span></summary><p>Affiche uniquement le délai réel annoncé par ton fournisseur/transporteur, avec une marge raisonnable.</p></details>
+<details><summary>Comment fonctionne un retour ? <span>+</span></summary><p>Le vendeur reste responsable envers son client. Prévois une procédure de retour claire et conforme aux règles applicables.</p></details>
+<details><summary>Le paiement est-il sécurisé ? <span>+</span></summary><p>Le site est prêt à être relié à un prestataire de paiement comme Stripe Checkout. Le paiement réel doit être configuré avant de vendre.</p></details>
+</div></section>
 
-    <section class="newsletter">
-      <p class="eyebrow">RESTE DANS LE RIDE</p><h2>Les prochains drops arrivent ici.</h2>
-      <form onsubmit="event.preventDefault(); this.innerHTML='<strong>🔥 Inscription confirmée !</strong>'"><input type="email" placeholder="Ton adresse e-mail" required><button>Je m’inscris →</button></form>
-    </section>
-  </main>
+<section id="about" class="trust"><div><p class="eyebrow">VOLTLY</p><h2>Simple. Propre. Rider.</h2></div>
+<div class="trust-grid"><article><span>01</span><h3>Design moderne</h3><p>Une identité sobre et sportive qui colle à ton setup.</p></article>
+<article><span>02</span><h3>Produits utiles</h3><p>On privilégie les accessoires faciles à comprendre et à utiliser.</p></article>
+<article><span>03</span><h3>Marque en construction</h3><p>Les prochains produits peuvent être ajoutés directement au catalogue.</p></article></div></section>
 
-  <footer><div class="logo">VOLT<span>LY</span></div><p>Accessoires pour trottinettes électriques.</p><small>© 2026 VOLTLY. Tous droits réservés.</small></footer>
+<section class="newsletter"><p class="eyebrow">RESTE DANS LE RIDE</p><h2>Les prochains drops arrivent ici.</h2>
+<form id="newsletter"><input type="email" placeholder="Ton adresse e-mail" required><label><input type="checkbox" required> J'accepte de recevoir les nouveautés VOLTLY.</label><button>Je m'inscris →</button></form></section>
+</main>
 
-  <aside class="cart" id="cart">
-    <div class="cart-head"><h2>Ton panier</h2><button id="closeCart">×</button></div>
-    <div id="cartItems" class="cart-items"></div>
-    <div class="cart-bottom"><div><span>Sous-total</span><strong id="subtotal">0,00 €</strong></div><button class="checkout" onclick="alert('Paiement à connecter : Stripe / PayPal / autre solution de paiement.')">Passer au paiement →</button><small>Démo prête à connecter à Stripe, Shopify ou un autre prestataire.</small></div>
-  </aside>
-  <div class="overlay" id="overlay"></div>
+<footer><div class="logo">VOLT<span>LY</span></div><p>Accessoires pour trottinettes électriques.</p><div class="footer-links"><a href="legal.html">Mentions légales</a><a href="legal.html#cgv">CGV</a><a href="legal.html#privacy">Confidentialité</a><a href="legal.html#returns">Retours</a></div><small>© 2026 VOLTLY.</small></footer>
 
-  <script src="script.js"></script>
-</body>
-</html>
+<aside class="cart" id="cart"><div class="cart-head"><h2>Ton panier</h2><button id="closeCart">×</button></div><div id="cartItems" class="cart-items"></div>
+<div class="cart-bottom"><div><span>Sous-total</span><strong id="subtotal">0,00 €</strong></div><button class="checkout" id="checkout">Continuer vers le paiement →</button><small>Le paiement réel doit être connecté avant toute vente.</small></div></aside><div class="overlay" id="overlay"></div>
+
+<div class="modal" id="productModal"><div class="modal-card"><button class="modal-close" id="modalClose">×</button><img id="modalImg" alt=""><div><p class="eyebrow" id="modalBadge"></p><h2 id="modalName"></h2><p id="modalDesc"></p><strong class="modal-price" id="modalPrice"></strong><button class="primary modal-add" id="modalAdd">Ajouter au panier →</button></div></div></div>
+<script src="script.js"></script>
+</body></html>

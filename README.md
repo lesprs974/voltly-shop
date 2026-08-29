@@ -1,23 +1,20 @@
-# VOLTLY — boutique d'accessoires pour trottinettes
+# VOLTLY V2
+Boutique statique prête pour GitHub Pages.
 
-Site e-commerce statique moderne, prêt à être publié avec GitHub Pages.
+## Ce qui est inclus
+- Photos des 3 produits dans `assets/`
+- Boutique responsive
+- Filtres catégories
+- Fiches produit en fenêtre
+- Panier avec quantités + sauvegarde locale
+- FAQ
+- Pages d'informations légales à compléter
+- Newsletter de démonstration
+- Structure prête à connecter à un prestataire de paiement
 
-## Mise en ligne sur GitHub
-1. Crée un nouveau dépôt GitHub, par exemple `voltly-shop`.
-2. Envoie **tous les fichiers et dossiers** de ce projet à la racine du dépôt.
-3. Dans GitHub : **Settings → Pages → Deploy from a branch → main → /(root) → Save**.
-4. Après quelques minutes, GitHub fournit l'adresse publique du site.
+## Important avant de vendre
+Le paiement est volontairement NON CONNECTÉ. Il faut créer/configurer une activité commerciale adaptée, préparer les informations légales, la livraison, les retours et un moyen de paiement réel.
 
-## À modifier avant de vendre réellement
-- Les prix et noms sont dans `script.js`.
-- Les photos sont dans `assets/`.
-- Le bouton de paiement est actuellement une démo : il faut connecter Stripe, PayPal, Shopify ou une autre solution de paiement.
-- Ajoute tes vraies infos : société, CGV, politique de confidentialité, livraison, retours, contact et mentions légales.
-- Vérifie la disponibilité du nom VOLTLY et du nom de domaine avant de lancer la marque.
+Pour un paiement simple, Stripe Checkout peut être utilisé après création/configuration du compte professionnel et des produits.
 
-## Produits déjà intégrés
-- Support téléphone aluminium
-- Bouchons de valve couleur
-- Protection de câble spirale
-
-Le panier fonctionne dans le navigateur et est conservé avec localStorage.
+Ne publie pas de fausses informations légales ou de faux délais de livraison.
