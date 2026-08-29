@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="VOLTLY — accessoires modernes pour trottinettes électriques.">
+  <title>VOLTLY — Accessoires pour trottinettes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">⚡ Livraison offerte dès 35€ · Paiement sécurisé · Nouveaux accessoires chaque semaine</div>
+
+  <header class="header">
+    <a class="logo" href="#top">VOLT<span>LY</span></a>
+    <nav>
+      <a href="#shop">Boutique</a>
+      <a href="#collections">Collections</a>
+      <a href="#about">À propos</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn">Panier <b id="cartCount">0</b></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">ACCESSOIRES • RIDE • STYLE</p>
+        <h1>Ton ride.<br><em>Ton style.</em></h1>
+        <p class="hero-text">Des accessoires propres, utiles et stylés pour personnaliser ta trottinette électrique sans exploser ton budget.</p>
+        <div class="hero-actions">
+          <a class="primary" href="#shop">Découvrir la collection <span>→</span></a>
+          <a class="secondary" href="#about">Pourquoi VOLTLY ?</a>
+        </div>
+        <div class="stats"><div><strong>+20</strong><small>accessoires prévus</small></div><div><strong>4.9/5</strong><small>objectif satisfaction</small></div><div><strong>24/7</strong><small>support en ligne</small></div></div>
+      </div>
+      <div class="hero-card">
+        <div class="glow"></div>
+        <div class="hero-product">
+          <span class="floating-tag">NOUVEAU</span>
+          <div class="mini-wheel"></div>
+          <div class="hero-word">VOLTLY</div>
+          <p>ESSENTIALS FOR ELECTRIC RIDERS</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee"><span>MINIMAL · SOLIDE · ACCESSIBLE · MINIMAL · SOLIDE · ACCESSIBLE ·</span></section>
+
+    <section id="shop" class="section">
+      <div class="section-head">
+        <div><p class="eyebrow">LA BOUTIQUE</p><h2>Les essentiels du rider.</h2></div>
+        <div class="filters"><button class="filter active" data-cat="all">Tout</button><button class="filter" data-cat="style">Style</button><button class="filter" data-cat="pratique">Pratique</button></div>
+      </div>
+      <div class="products" id="products"></div>
+    </section>
+
+    <section id="collections" class="collection">
+      <div><p class="eyebrow">COLLECTION 01</p><h2>Upgrade ton setup.</h2><p>Des petits détails qui changent tout : finition aluminium, couleurs propres et accessoires pensés pour la route.</p><a class="primary" href="#shop">Voir les produits →</a></div>
+      <div class="collection-grid"><div>01<br><b>STYLE</b></div><div>02<br><b>PROTECTION</b></div><div>03<br><b>CONFORT</b></div></div>
+    </section>
+
+    <section id="about" class="trust">
+      <div><p class="eyebrow">POURQUOI VOLTLY</p><h2>Simple. Propre. Rider.</h2></div>
+      <div class="trust-grid"><article><span>01</span><h3>Design moderne</h3><p>Une identité sobre et sportive qui colle à ton setup.</p></article><article><span>02</span><h3>Prix accessibles</h3><p>Des accessoires faciles à ajouter au panier et à offrir.</p></article><article><span>03</span><h3>Livraison rapide</h3><p>Une boutique pensée pour commander en quelques secondes.</p></article></div>
+    </section>
+
+    <section class="newsletter">
+      <p class="eyebrow">RESTE DANS LE RIDE</p><h2>Les prochains drops arrivent ici.</h2>
+      <form onsubmit="event.preventDefault(); this.innerHTML='<strong>🔥 Inscription confirmée !</strong>'"><input type="email" placeholder="Ton adresse e-mail" required><button>Je m’inscris →</button></form>
+    </section>
+  </main>
+
+  <footer><div class="logo">VOLT<span>LY</span></div><p>Accessoires pour trottinettes électriques.</p><small>© 2026 VOLTLY. Tous droits réservés.</small></footer>
+
+  <aside class="cart" id="cart">
+    <div class="cart-head"><h2>Ton panier</h2><button id="closeCart">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-bottom"><div><span>Sous-total</span><strong id="subtotal">0,00 €</strong></div><button class="checkout" onclick="alert('Paiement à connecter : Stripe / PayPal / autre solution de paiement.')">Passer au paiement →</button><small>Démo prête à connecter à Stripe, Shopify ou un autre prestataire.</small></div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
