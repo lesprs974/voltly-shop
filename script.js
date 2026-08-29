@@ -2,7 +2,7 @@ const products = [
   {id:1, name:"Support téléphone", desc:"Support téléphone pour voiture", price:10.99, cat:"accessoires"},
   {id:2, name:"Câble USB", desc:"Câble USB de qualité", price:5.99, cat:"accessoires"},
   {id:3, name:"Protection câble FLEX", desc:"Gaine souple pour protéger les câbles", price:4.59, cat:"accessoires"}
-];
+
 function save(){localStorage.setItem("voltly-cart",JSON.stringify(cart));renderCart()}
 function addToCart(id){const x=cart.find(i=>i.id===id);x?x.qty++:cart.push({id,qty:1});save();openCart()}
 function change(id,d){const x=cart.find(i=>i.id===id);if(!x)return;x.qty+=d;if(x.qty<=0)cart=cart.filter(i=>i.id!==id);save()}
