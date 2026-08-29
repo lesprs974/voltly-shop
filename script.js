@@ -1,6 +1,6 @@
 const products=[
-{id:1,name:"Support téléphone ALU",desc:"Support aluminium anti-vibration, angle réglable.",price:24.90,cat:"pratique",img:"assets/phone-holder.png",badge:"BEST-SELLER"},
-{id:2,name:"Bouchons de valve COLOR",desc:"Pack de 4 bouchons — plusieurs couleurs.",price:7.90,cat:"style",img:"assets/valve-caps.jpeg",badge:"NOUVEAU"},
+{id:1,name:"Support téléphone ALU",desc:"Support aluminium anti-vibration, angle réglable.",price:24.90,cat:"pratique",img:"support-telephone.jpg",badge:"BEST-SELLER"},
+{id:2,name:"Bouchons de valve COLOR",desc:"Pack de 4 bouchons — plusieurs couleurs.",price:7.90,cat:"style",img:"bouchon-valve.jpg",badge:"NOUVEAU"},
 {id:3,name:"Protection câble FLEX",desc:"Gaine spirale pour organiser et protéger les câbles.",price:6.90,cat:"pratique",img:"assets/cable-protectors.png",badge:"ESSENTIEL"}
 ];
 let cart=JSON.parse(localStorage.getItem("voltly-cart")||"[]"), selected=null;
